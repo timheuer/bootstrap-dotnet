@@ -28,7 +28,7 @@ runs:
         dotnet-version: ${{ inputs.dotnet-version }}
 
     - name: Setup MSBuild
-      if: inputs.msbuild == true && runner.OS == 'Windows'
+      if: inputs.msbuild == true && runner.os == 'Windows'
       uses: microsoft/setup-msbuild@v1.1
 
     - name: Setup NuGet
