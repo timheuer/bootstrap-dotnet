@@ -9,15 +9,15 @@ inputs:
   sdk:
     description: 'Setup .NET SDK'
     required: false
-    default: true
+    default: 'true'
   msbuild:
     description: 'Setup MSBuild'
     required: false
-    default: true
+    default: 'true'
   nuget:
     description: 'Setup NuGet'
     required: false
-    default: true
+    default: 'true'
 runs:
   using: "composite"
   steps:
