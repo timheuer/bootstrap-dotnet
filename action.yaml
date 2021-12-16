@@ -22,15 +22,15 @@ runs:
   using: "composite"
   steps:
     - name: Setup dotnet
-      if: inputs.sdk == true
+      if: inputs.sdk == 'true'
       uses: actions/setup-dotnet@v1.9.0
       with:
         dotnet-version: ${{ inputs.dotnet-version }}
 
     - name: Setup MSBuild
-      if: inputs.msbuild == true && runner.os == 'Windows'
+      if: inputs.msbuild == 'true' && runner.os == 'Windows'
       uses: microsoft/setup-msbuild@v1.1
 
     - name: Setup NuGet
-      if: inputs.nuget == true
+      if: inputs.nuget == 'true'
       uses: NuGet/setup-nuget@v1.0.5
