@@ -10,7 +10,7 @@ The action encapsulates the following other actions:
 ## Usage
 You can use this composite Action in your own workflow by adding:
 
-```YAML
+```yml
 on: [push]
 
 jobs:
@@ -40,7 +40,7 @@ You can disable any step of these by opting out in your usage.
 
 Example, to skip NuGet setup
 
-```YAML
+```yml
 on: [push]
 
 jobs:
@@ -53,7 +53,7 @@ jobs:
         uses: timheuer/bootstrap-dotnet@v1
         with:
           dotnet-version: 6.0.x
-          nuget: false
+          nuget: 'false'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
 ```
