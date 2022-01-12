@@ -6,6 +6,7 @@ The action encapsulates the following other actions:
 - [actions/setup-dotnet](https://github.com/actions/setup-dotnet)
 - [microsoft/setup-msbuild](https://github.com/microsoft/setup-msbuild)
 - [NuGet/setup-nuget](https://github.com/NuGet/setup-nuget)
+- [darenm/Setup-VSTest](https://github.com/darenm/Setup-VSTest)
 
 ## Usage
 You can use this composite Action in your own workflow by adding:
@@ -33,7 +34,7 @@ This action uses the following defaults:
 - dotnet-version: 6.0.x
 - MSBuild: latest (meaning the latest version installed on an agent)
 - NuGet: latest (meaning the latest CLI version)
-- 
+- VSTest: false (meaning VSTest.Console is not setup for you)
 
 ### Options
 You can disable any step of these by opting out in your usage.
