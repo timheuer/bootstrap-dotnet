@@ -21,6 +21,10 @@ inputs:
     description: 'Setup NuGet'
     required: false
     default: 'true'
+  vstest:
+    description: 'Setup VSTest'
+    required: false
+    default: 'false'
 runs:
   using: "composite"
   steps:
@@ -37,3 +41,7 @@ runs:
     - name: Setup NuGet
       if: inputs.nuget == 'true'
       uses: NuGet/setup-nuget@v1.0.5
+
+    - name: Setup VSTest'
+      if: inputs.vstest == 'true'
+      uses: darenm/Setup-VSTest@v1
