@@ -30,13 +30,13 @@ runs:
   steps:
     - name: Setup dotnet
       if: inputs.sdk == 'true'
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: ${{ inputs.dotnet-version }}
 
     - name: Setup MSBuild
       if: inputs.msbuild == 'true' && runner.os == 'Windows'
-      uses: microsoft/setup-msbuild@v1
+      uses: microsoft/setup-msbuild@v3
 
     - name: Setup NuGet
       if: inputs.nuget == 'true'
