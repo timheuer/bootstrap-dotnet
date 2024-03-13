@@ -36,7 +36,7 @@ runs:
 
     - name: Setup MSBuild
       if: inputs.msbuild == 'true' && runner.os == 'Windows'
-      uses: microsoft/setup-msbuild@v3
+      uses: microsoft/setup-msbuild@v2
 
     - name: Setup NuGet
       if: inputs.nuget == 'true'
