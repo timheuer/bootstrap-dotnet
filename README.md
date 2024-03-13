@@ -19,11 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - id: foo
-        uses: timheuer/bootstrap-dotnet@v1
+        uses: timheuer/bootstrap-dotnet@v2
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 8.0.x
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
 ```
@@ -31,7 +31,7 @@ jobs:
 ### Defaults
 This action uses the following defaults:
 
-- dotnet-version: 6.0.x
+- dotnet-version: 8.0.x
 - MSBuild: latest (meaning the latest version installed on an agent)
 - NuGet: latest (meaning the latest CLI version)
 - VSTest: false (meaning VSTest.Console is not setup for you)
@@ -49,11 +49,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - id: foo
-        uses: timheuer/bootstrap-dotnet@v1
+        uses: timheuer/bootstrap-dotnet@v2
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 8.0.x
           nuget: 'false'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
