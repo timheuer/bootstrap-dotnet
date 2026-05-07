@@ -42,6 +42,6 @@ runs:
       if: inputs.nuget == 'true'
       uses: NuGet/setup-nuget@v4
 
-    - name: Setup VSTest'
+    - name: Setup VSTest
       if: inputs.vstest == 'true'
       uses: darenm/Setup-VSTest@v1.3
